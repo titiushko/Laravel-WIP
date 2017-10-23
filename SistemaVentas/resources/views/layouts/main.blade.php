@@ -61,7 +61,11 @@
             <!-- /. NAV SIDE -->
             <div id="page-wrapper" >
                 <div id="page-inner">
-                    @yield("contenido")
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            @yield("contenido")
+                        </div>
+                    </div>
                 </div>
                 <!-- /. PAGE INNER -->
             </div>

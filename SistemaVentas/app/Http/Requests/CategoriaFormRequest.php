@@ -2,9 +2,9 @@
 
 namespace SistemaVentas\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
+use SistemaVentas\Http\Requests\Request;
 
-class CategoriaFormRequest extends FormRequest
+class CategoriaFormRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.

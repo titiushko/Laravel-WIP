@@ -3,9 +3,10 @@
 namespace SistemaVentas\Http\Controllers;
 
 use Illuminate\Http\Request;
-use SistemaVentas\Http\Requests\CategoriaFormRequest;
+use SistemaVentas\Http\Requests;
 use SistemaVentas\Categoria;
-use SistemaVentas\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Redirect;
+use SistemaVentas\Http\Requests\CategoriaFormRequest;
 use DB;
 
 class CategoriaController extends Controller

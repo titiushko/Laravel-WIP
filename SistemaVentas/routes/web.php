@@ -11,5 +11,6 @@
 |
 */
 
-Route::get("/", function () { return view("welcome"); });
-Route::get("segunda/ruta", "HolaMundoController@saludo");
+Route::get("/", "PagesController@home");
+Route::get("/about", "PagesController@about");
+Route::get("/contact", "PagesController@contact");

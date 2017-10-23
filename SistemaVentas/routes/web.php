@@ -11,6 +11,5 @@
 |
 */
 
-Route::get("/", "PagesController@home");
-Route::get("/about", "PagesController@about");
-Route::get("/contact", "PagesController@contact");
+Route::get("/", function () { return view("welcome"); });
+Route::resource("almacen/categoria", "CategoriaController");

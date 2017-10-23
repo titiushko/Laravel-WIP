@@ -15,49 +15,49 @@ class CategoriaController extends Controller
     }
 
     public function index(Request $request) {
-    	if ($request) {
-    		$query = trim($request->get("searchText"));
-    		$categorias = DB:table("categoria")->where("nombrecategoria", "LIKE", "%".$query."%")
-    		->where("condicioncategoria", "=", true)
-    		->orderBy("categoriaid", "desc")
-    		->paginate(7);
-    		return view("almacen.categoria.index", ["categorias" => $categorias, "searchText" => $query]);
-    	}
+        if ($request) {
+            $query = trim($request->get("buscar"));
+            $categorias = DB::table("categoria")->where("nombrecategoria", "LIKE", "%".$query."%")
+            ->where("condicioncategoria", "=", true)
+            ->orderBy("categoriaid", "desc")
+            ->paginate(7);
+            return view("almacen.categoria.index", ["categorias" => $categorias, "buscar" => $query]);
+        }
     }
 
-    public function nuevo() {
-    	return view("almacen.categoria.nuevo");
+    public function create() {
+        return view("almacen.categoria.create");
     }
 
-    public function guardar(CategoriaFormRequest $request) {
-    	$categoria = new Categoria;
-    	$categoria->nombrecategoria = $request->get("nombre");
-    	$categoria->descripcioncategoria = $request->get("descripcion");
-    	$categoria->condicioncategoria = true;
-    	$categoria->save();
-    	return Redirect::to("almacen/categoria");
+    public function store(CategoriaFormRequest $request) {
+        $categoria = new Categoria;
+        $categoria->nombrecategoria = $request->get("nombre");
+        $categoria->descripcioncategoria = $request->get("descripcion");
+        $categoria->condicioncategoria = true;
+        $categoria->save();
+        return Redirect::to("almacen/categoria");
     }
 
-    public function ver($id) {
-    	return view("almacen.categoria.ver", ["categoria" => Categoria::findOrFail($id)]);
+    public function show($id) {
+        return view("almacen.categoria.show", ["categoria" => Categoria::findOrFail($id)]);
     }
 
-    public function editar($id) {
-    	return view("almacen.categoria.editar", ["categoria" => Categoria::findOrFail($id)]);
+    public function edit($id) {
+        return view("almacen.categoria.edit", ["categoria" => Categoria::findOrFail($id)]);
     }
 
-    public function actualizar(CategoriaFormRequest $request, $id) {
-    	$categoria = Categoria::findOrFail($id);
-    	$categoria->nombrecategoria = $request->get("nombre");
-    	$categoria->descripcioncategoria = $request->get("descripcion");
-    	$categoria->update();
-    	return Redirect::to("almacen/categoria");
+    public function update(CategoriaFormRequest $request, $id) {
+        $categoria = Categoria::findOrFail($id);
+        $categoria->nombrecategoria = $request->get("nombre");
+        $categoria->descripcioncategoria = $request->get("descripcion");
+        $categoria->update();
+        return Redirect::to("almacen/categoria");
     }
 
-    public function eliminar($id) {
-    	$categoria = Categoria::findOrFail($id);
+    public function destroy($id) {
+        $categoria = Categoria::findOrFail($id);
         $categoria->condicioncategoria = false;
-    	$categoria->update();
-    	return Redirect::to("almacen/categoria");
+        $categoria->update();
+        return Redirect::to("almacen/categoria");
     }
 }

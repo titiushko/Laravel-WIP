@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>SistemaVentas</Name>
+    <ProjectGuid>{21ee2dcd-2421-4158-806a-2e0dfdb74ac9}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\Console\Kernel.php" />
+    <Compile Include="app\Exceptions\Handler.php" />
+    <Compile Include="app\Http\Controllers\Auth\ForgotPasswordController.php" />
+    <Compile Include="app\Http\Controllers\Auth\LoginController.php" />
+    <Compile Include="app\Http\Controllers\Auth\RegisterController.php" />
+    <Compile Include="app\Http\Controllers\Auth\ResetPasswordController.php" />
+    <Compile Include="app\Http\Controllers\CategoriaController.php" />
+    <Compile Include="app\Http\Controllers\Controller.php" />
+    <Compile Include="app\Http\Middleware\EncryptCookies.php" />
+    <Compile Include="app\Http\Middleware\RedirectIfAuthenticated.php" />
+    <Compile Include="app\Http\Middleware\TrimStrings.php" />
+    <Compile Include="app\Http\Middleware\VerifyCsrfToken.php" />
+    <Compile Include="app\Http\Requests\CategoriaFormRequest.php" />
+    <Compile Include="app\Http\Requests\Request.php" />
+    <Compile Include="app\Http\Kernel.php" />
+    <Compile Include="app\Providers\AppServiceProvider.php" />
+    <Compile Include="app\Providers\AuthServiceProvider.php" />
+    <Compile Include="app\Providers\BroadcastServiceProvider.php" />
+    <Compile Include="app\Providers\EventServiceProvider.php" />
+    <Compile Include="app\Providers\RouteServiceProvider.php" />
+    <Compile Include="app\Categoria.php" />
+    <Compile Include="app\User.php" />
+    <Compile Include="bootstrap\cache\services.php" />
+    <Compile Include="bootstrap\app.php" />
+    <Compile Include="bootstrap\autoload.php" />
+    <Compile Include="config\app.php" />
+    <Compile Include="config\auth.php" />
+    <Compile Include="config\broadcasting.php" />
+    <Compile Include="config\cache.php" />
+    <Compile Include="config\database.php" />
+    <Compile Include="config\filesystems.php" />
+    <Compile Include="config\mail.php" />
+    <Compile Include="config\queue.php" />
+    <Compile Include="config\services.php" />
+    <Compile Include="config\session.php" />
+    <Compile Include="config\view.php" />
+    <Compile Include="database\factories\ModelFactory.php" />
+    <Compile Include="database\migrations\2014_10_12_000000_create_users_table.php" />
+    <Compile Include="database\migrations\2014_10_12_100000_create_password_resets_table.php" />
+    <Compile Include="database\seeds\DatabaseSeeder.php" />
+    <Compile Include="public\css\app.css" />
+    <Compile Include="public\css\bootstrap.css" />
+    <Compile Include="public\css\custom.css" />
+    <Compile Include="public\css\font-awesome.css" />
+    <Compile Include="public\font-awesome\fonts\fontawesome-webfontba72.eot" />
+    <Compile Include="public\font-awesome\fonts\fontawesome-webfontba72.svg" />
+    <Compile Include="public\font-awesome\fonts\fontawesome-webfontba72.ttf" />
+    <Compile Include="public\font-awesome\fonts\fontawesome-webfontba72.woff" />
+    <Compile Include="public\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Compile Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Compile Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Compile Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Compile Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Compile Include="public\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Compile Include="public\img\1.png" />
+    <Compile Include="public\img\2.png" />
+    <Compile Include="public\img\3.png" />
+    <Compile Include="public\img\4.png" />
+    <Compile Include="public\img\find_user.png" />
+    <Compile Include="public\js\dataTables\dataTables.bootstrap.css" />
+    <Compile Include="public\js\dataTables\dataTables.bootstrap.js" />
+    <Compile Include="public\js\dataTables\jquery.dataTables.js" />
+    <Compile Include="public\js\morris\morris-0.4.3.min.css" />
+    <Compile Include="public\js\morris\morris.js" />
+    <Compile Include="public\js\morris\raphael-2.1.0.min.js" />
+    <Compile Include="public\js\app.js" />
+    <Compile Include="public\js\bootstrap.min.js" />
+    <Compile Include="public\js\custom.js" />
+    <Compile Include="public\js\jquery-1.10.2.js" />
+    <Compile Include="public\js\jquery.metisMenu.js" />
+    <Compile Include="public\.htaccess" />
+    <Compile Include="public\favicon.ico" />
+    <Compile Include="public\index.php" />
+    <Compile Include="public\robots.txt" />
+    <Compile Include="public\web.config" />
+    <Compile Include="resources\assets\js\components\Example.vue" />
+    <Compile Include="resources\assets\js\app.js" />
+    <Compile Include="resources\assets\js\bootstrap.js" />
+    <Compile Include="resources\assets\sass\app.scss" />
+    <Compile Include="resources\assets\sass\_variables.scss" />
+    <Compile Include="resources\lang\en\auth.php" />
+    <Compile Include="resources\lang\en\pagination.php" />
+    <Compile Include="resources\lang\en\passwords.php" />
+    <Compile Include="resources\lang\en\validation.php" />
+    <Compile Include="resources\lang\es\auth.php" />
+    <Compile Include="resources\lang\es\pagination.php" />
+    <Compile Include="resources\lang\es\passwords.php" />
+    <Compile Include="resources\lang\es\validation.php" />
+    <Compile Include="resources\views\almacen\categoria\create.blade.php" />
+    <Compile Include="resources\views\almacen\categoria\edit.blade.php" />
+    <Compile Include="resources\views\almacen\categoria\index.blade.php" />
+    <Compile Include="resources\views\almacen\categoria\modal.blade.php" />
+    <Compile Include="resources\views\almacen\categoria\search.blade.php" />
+    <Compile Include="resources\views\layouts\main.blade.php" />
+    <Compile Include="resources\views\welcome.blade.php" />
+    <Compile Include="routes\api.php" />
+    <Compile Include="routes\channels.php" />
+    <Compile Include="routes\console.php" />
+    <Compile Include="routes\web.php" />
+    <Compile Include="schema\SistemaVentas.ldm" />
+    <Compile Include="schema\SistemaVentas.pdm" />
+    <Compile Include="schema\SistemaVentas.png" />
+    <Compile Include="schema\SistemaVentas.sql" />
+    <Compile Include="storage\framework\sessions\KEP0EAiqvXOeGoHlHfFLtzR7wvJOXHidCSIB4d3c" />
+    <Compile Include="storage\framework\sessions\LLhrHoQ8Mc7H7ACKbIIU7jGUqCSWhOlvOM35h5m4" />
+    <Compile Include="storage\framework\sessions\n3LHLYxqIJAOwLord2LEFBwuw4iMGALwqGjbhIFF" />
+    <Compile Include="storage\framework\views\134a8aa9134999e16f6355e34553b980b21b7ace.php" />
+    <Compile Include="storage\framework\views\427c81f938f620409dd284a82928647d9eb4fd48.php" />
+    <Compile Include="storage\framework\views\4d918ac3faa08a70555e4afb590455b1f9807b4d.php" />
+    <Compile Include="storage\framework\views\80dcbe0ea655f3c77103faa92d8834f1f3959753.php" />
+    <Compile Include="storage\framework\views\9b835007b9e50214242acc8034d2b9ad080a186f.php" />
+    <Compile Include="storage\framework\views\d340eee57c430b83618daf3c1fc0c9da3808de88.php" />
+    <Compile Include="storage\framework\views\d4cc9918143c3f945be535918596a53cce6802e3.php" />
+    <Compile Include="storage\framework\views\fff2ad4f77b732bade814817506742a39a4f9147.php" />
+    <Compile Include="storage\logs\laravel.log" />
+    <Compile Include="tests\Feature\ExampleTest.php" />
+    <Compile Include="tests\Unit\ExampleTest.php" />
+    <Compile Include="tests\CreatesApplication.php" />
+    <Compile Include="tests\TestCase.php" />
+    <Compile Include=".env" />
+    <Compile Include="artisan" />
+    <Compile Include="composer.json" />
+    <Compile Include="package.json" />
+    <Compile Include="phpunit.xml" />
+    <Compile Include="server.php" />
+    <Compile Include="webpack.mix.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\Console" />
+    <Folder Include="app\Exceptions" />
+    <Folder Include="app\Http\Controllers\Auth" />
+    <Folder Include="app\Http\Controllers" />
+    <Folder Include="app\Http\Middleware" />
+    <Folder Include="app\Http\Requests" />
+    <Folder Include="app\Http" />
+    <Folder Include="app\Providers" />
+    <Folder Include="app" />
+    <Folder Include="bootstrap\cache" />
+    <Folder Include="bootstrap" />
+    <Folder Include="config" />
+    <Folder Include="database\factories" />
+    <Folder Include="database\migrations" />
+    <Folder Include="database\seeds" />
+    <Folder Include="database" />
+    <Folder Include="public\css" />
+    <Folder Include="public\font-awesome\fonts" />
+    <Folder Include="public\font-awesome" />
+    <Folder Include="public\fonts" />
+    <Folder Include="public\img" />
+    <Folder Include="public\js\dataTables" />
+    <Folder Include="public\js\morris" />
+    <Folder Include="public\js" />
+    <Folder Include="public" />
+    <Folder Include="resources\assets\js\components" />
+    <Folder Include="resources\assets\js" />
+    <Folder Include="resources\assets\sass" />
+    <Folder Include="resources\assets" />
+    <Folder Include="resources\lang\en" />
+    <Folder Include="resources\lang\es" />
+    <Folder Include="resources\lang" />
+    <Folder Include="resources\views\almacen\categoria" />
+    <Folder Include="resources\views\almacen" />
+    <Folder Include="resources\views\layouts" />
+    <Folder Include="resources\views" />
+    <Folder Include="resources" />
+    <Folder Include="routes" />
+    <Folder Include="schema" />
+    <Folder Include="storage\app\public" />
+    <Folder Include="storage\app" />
+    <Folder Include="storage\framework\cache" />
+    <Folder Include="storage\framework\sessions" />
+    <Folder Include="storage\framework\testing" />
+    <Folder Include="storage\framework\views" />
+    <Folder Include="storage\framework" />
+    <Folder Include="storage\logs" />
+    <Folder Include="storage" />
+    <Folder Include="tests\Feature" />
+    <Folder Include="tests\Unit" />
+    <Folder Include="tests" />
+  </ItemGroup>
+</Project>

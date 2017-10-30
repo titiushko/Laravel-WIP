@@ -3,9 +3,8 @@
 namespace SistemaVentas\Http\Controllers;
 
 use Illuminate\Http\Request;
-use SistemaVentas\Http\Requests;
-use SistemaVentas\Categoria;
 use Illuminate\Support\Facades\Redirect;
+use SistemaVentas\Categoria;
 use SistemaVentas\Http\Requests\CategoriaFormRequest;
 use DB;
 
@@ -21,7 +20,7 @@ class CategoriaController extends Controller
             $categorias = DB::table("categoria")->where("nombrecategoria", "LIKE", "%".$query."%")
             ->where("condicioncategoria", "=", true)
             ->orderBy("categoriaid", "desc")
-            ->paginate(7);
+            ->paginate(5);
             return view("almacen.categoria.index", ["categorias" => $categorias, "buscar" => $query]);
         }
     }
